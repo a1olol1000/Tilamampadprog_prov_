@@ -6,6 +6,14 @@ using UnityEngine.InputSystem;
 
 public class RifleScript : MonoBehaviour
 {
+    [SerializeField]
+    GameObject camera;
+    [SerializeField]
+    GameObject capsule;
+    [SerializeField]
+    GameObject barrel;
+    [SerializeField]
+    GameObject bull;
     private bool _shoot;
     [SerializeField]
     float attackDmg = 37;
@@ -29,7 +37,8 @@ public class RifleScript : MonoBehaviour
     {
         _secondTimer += 1 *fireRatePerSeconds *Time.deltaTime;
         if (_shoot && _secondTimer > 1)
-        {
+        { 
+            Instantiate(bull, barrel.transform.position, barrel.transform.rotation);
             print("baaam");
             _secondTimer = 0;
         }

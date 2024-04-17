@@ -97,6 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718abfabc31e8b64e833e4524b9660dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 4284524644509703465}
+  capsule: {fileID: 5506083173137945735}
+  barrel: {fileID: 4254632629393795893}
+  bull: {fileID: 5799037292967989485, guid: 388c3d61dfc45f44b962edeab7df9548, type: 3}
   attackDmg: 37
   critDmg: 23
   critChans: 30
