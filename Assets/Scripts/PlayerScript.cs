@@ -2,9 +2,20 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Processors;
 using UnityEngine.ProBuilder.MeshOperations;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 public class PlayerScript : MonoBehaviour
 {
+    [SerializeField]
+    GameObject canvas;
+    [SerializeField]
+    Scrollbar slider1;
+    [SerializeField]
+    Scrollbar slider2;    
+    [SerializeField]
+    Scrollbar slider3;
+    [SerializeField]
+    Scrollbar slider4;    
     private float _equal;
     private float _lookCap;
     public float cursorSpread;
@@ -30,7 +41,7 @@ public class PlayerScript : MonoBehaviour
         rigidbody = capsule.GetComponent<Rigidbody>();
     }
     void Start()
-    {
+    {   
         UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         _securespeed = speed;
     }
@@ -72,11 +83,13 @@ public class PlayerScript : MonoBehaviour
         if (jump.Get<float>()>0)
         {
             rigidbody.AddForce(Vector3.up * jumpForce);
-            cursorSpread += 0.2f;
+            CursorSpreadAdd();
+            UptdateSlider();
         }
         else
         {
-            cursorSpread -= 0.2f;
+            CursorSpreadRemove();
+            UptdateSlider();
         }
     }
     void OnRun(InputValue runing)
@@ -84,13 +97,30 @@ public class PlayerScript : MonoBehaviour
         if (runing.Get<float>()>0)
         {
             speed = speed+runSpeed;
-            cursorSpread += 0.2f;
+            CursorSpreadAdd();
+            UptdateSlider();
         }
         else
         {
             speed = _securespeed;
-            cursorSpread -=0.2f;
+            CursorSpreadRemove();
+            UptdateSlider();
         }
         
+    }
+    void UptdateSlider()
+    {
+        slider1.value = cursorSpread;
+        slider2.value = cursorSpread;
+        slider3.value = cursorSpread;
+        slider4.value = cursorSpread;
+    }
+    void CursorSpreadAdd()
+    {
+        cursorSpread += 0.2f;
+    }
+    void CursorSpreadRemove()
+    {
+        cursorSpread += -0.2f;
     }
 }

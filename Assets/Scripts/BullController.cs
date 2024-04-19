@@ -24,7 +24,7 @@ public class BullController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigidbody.AddForce(0,0,speed);
+        rigidbody.AddRelativeForce(0,0,speed);
         speed = speed/2;
     }
 }
