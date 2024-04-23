@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class RifleScript : MonoBehaviour
 {
+    int ammo = 14;
     PlayerScript playerScript;
     [SerializeField]
     GameObject barrel;
@@ -40,11 +41,13 @@ public class RifleScript : MonoBehaviour
         _TD = Time.deltaTime;
         _secundSecondTimer += 1*spread*_TD;
         _secondTimer += 1 *fireRatePerSeconds *_TD;
-        if (_shoot && _secondTimer > 1)
+        if (_shoot && _secondTimer > 1&& ammo>0)
         { 
             Instantiate(bull, barrel.transform.position, barrel.transform.rotation);
             _secondTimer = 0;
             _secundSecondTimer = 0;
+            ammo --;
+            BroadcastMessage("OnAmmoCount",ammo);
         }
         if (_secundSecondTimer < 1&& limit)
         {

@@ -104,6 +104,7 @@ MonoBehaviour:
   critChans: 30
   reloadTimeSeconds: 3.5
   fireRatePerSeconds: 1.5
+  spread: 2.5
 --- !u!114 &7406367626653349937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +117,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a130ad32697c80440b8ab268618ca88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 605846874276614666}
+  slider1: {fileID: 7339193293476622138}
+  slider2: {fileID: 2615081899785625096}
+  slider3: {fileID: 2487362807049351927}
+  slider4: {fileID: 1011986843260108754}
   cursorSpread: 0
   sensitivityPercent: 38
   runSpeed: 7
@@ -336,6 +342,7 @@ GameObject:
   - component: {fileID: 8183415630586167442}
   - component: {fileID: 3934348741079879789}
   - component: {fileID: 4994890570273014250}
+  - component: {fileID: 7094613649574600768}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -439,6 +446,26 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7094613649574600768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605846874276614666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867b6d88fb0e25e45af09a58bdd8de63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skat: {fileID: 5294086339181142433}
+  _hp: 6
+  heart1: {fileID: 911384012603827686}
+  heart2: {fileID: 7998319687489386433}
+  heart3: {fileID: 8917105338151018178}
+  heart4: {fileID: 8953368184846432642}
+  heart5: {fileID: 3112002123630352314}
+  heart6: {fileID: 8691243469477894732}
 --- !u!1 &679138714163401103
 GameObject:
   m_ObjectHideFlags: 0
