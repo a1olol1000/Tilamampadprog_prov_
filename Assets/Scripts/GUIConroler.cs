@@ -12,6 +12,10 @@ public class GUIConroler : MonoBehaviour
     [SerializeField]
     Text skott;
     [SerializeField]
+    int magazine;
+    [SerializeField]
+    Text magazines;
+    [SerializeField]
     private int _hp= 6;
     float timer = 0;
     [SerializeField]
@@ -36,26 +40,26 @@ public class GUIConroler : MonoBehaviour
     void Update()
     {
         skott.text = ToString(ammo);
+        magazines.text = ToString(magazine);
         
-        timer += 1 *Time.deltaTime;
-        if (timer>1)
-        {
-            OnTakeDamage(1);
-            timer = 0;
-        }
-        else
-        {
-            OnTakeDamage(0);
-        }
+        
+        
+        OnTakeDamage(0);
+        
     }
 
     private string ToString(int result)
     {
         return Convert.ToString(result);
     }
-    void OnAmmoCount(int ammog)
+   public void OnAmmoCount(int ammog)
     {
         ammo = ammog;
+        
+    }
+    public void OnMagazineCount(int magazinesg)
+    {
+        magazine = magazinesg;
         
     }
 

@@ -1,28 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MagasineScript : MonoBehaviour
 {
-    protected int _maxAmmo = 14;
-    private int _ammoAmount;
-    
+    [SerializeField]
+    GameObject thisGameObject;
     // Start is called before the first frame update
     void Start()
     {
-        _ammoAmount = Random.Range(0,_maxAmmo);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-     if (_ammoAmount > _maxAmmo)
-     {
-        _ammoAmount = _maxAmmo;
-     }   
-     if (_ammoAmount < 0)
-     {
-        _ammoAmount = 0;
-     }
+       
+    }
+    private void OnCollisionEnter(Collision other) 
+    {
+        Vector3 vector3 = new();
+        vector3.x = Random.Range(-100,100);
+        vector3.z = Random.Range(-100,100);
+        vector3.y = 20;
+        other.body.BroadcastMessage("OnMagazinecollide");
+        Instantiate(thisGameObject,vector3,Quaternion.identity);
+        Destroy(this.gameObject);
     }
 }

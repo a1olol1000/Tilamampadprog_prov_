@@ -34,12 +34,12 @@
                 },
                 {
                     "name": "Reload",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "0632f7bf-8c44-4112-8f76-b2a0dc66ef3f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Look",

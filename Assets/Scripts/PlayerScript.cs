@@ -53,7 +53,7 @@ public class PlayerScript : MonoBehaviour
         capsule.transform.Translate(-move.y*speed *Time.deltaTime,0,move.x*speed *Time.deltaTime);
         capsule.transform.Rotate(0,look.x*sensitivityPercent/100,0);
         camera.transform.Rotate(-look.y*sensitivityPercent/100,0,0);
-         _lookCap += -look.y*sensitivityPercent/100;
+        _lookCap += -look.y*sensitivityPercent/100;
         if (_lookCap > 90)
         {
             _equal = 90 -_lookCap;
@@ -122,5 +122,17 @@ public class PlayerScript : MonoBehaviour
     void CursorSpreadRemove()
     {
         cursorSpread += -0.2f;
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        print("collide");
+        if (other.gameObject.GetComponent<EnemyCTRL>())
+        {
+            print("die");
+            other.gameObject.BroadcastMessage("OnPlayerEnter");
+            BroadcastMessage("OnTakeDamage",1);
+        }
+        
+        print("done");
     }
 }

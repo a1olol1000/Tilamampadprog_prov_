@@ -9,10 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7734598087893160543}
-  - component: {fileID: 2311902253293519914}
-  - component: {fileID: 1875114894413030769}
-  - component: {fileID: 7406367626653349937}
-  - component: {fileID: 1290868628287150732}
   m_Layer: 0
   m_Name: gon rifle not bathesda
   m_TagString: Untagged
@@ -47,132 +43,6 @@ Transform:
   - {fileID: 7667789194281693052}
   m_Father: {fileID: 2505792670872093527}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &2311902253293519914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5780147629045731382, guid: b86c7b5b060d14c45998741778e6f87e, type: 3}
-  m_PrefabInstance: {fileID: 2599421742029437285}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185487010789711180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: bd63fd354c9d1ab4eb6a05816c9258ed, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 12034542-55f8-4d51-b6d6-0a32201d55f7
-    m_ActionName: Player/Walk[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1e819d8c-546b-47a3-92c9-c68ba32ffa9f
-    m_ActionName: Player/Fire[/Mouse/leftButton]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &1875114894413030769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5805085678743532637, guid: b86c7b5b060d14c45998741778e6f87e, type: 3}
-  m_PrefabInstance: {fileID: 2599421742029437285}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185487010789711180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718abfabc31e8b64e833e4524b9660dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  barrel: {fileID: 4254632629393795893}
-  bull: {fileID: 5799037292967989485, guid: 388c3d61dfc45f44b962edeab7df9548, type: 3}
-  attackDmg: 37
-  critDmg: 23
-  critChans: 30
-  reloadTimeSeconds: 3.5
-  fireRatePerSeconds: 1.5
-  spread: 2.5
---- !u!114 &7406367626653349937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 211699312937978631, guid: b86c7b5b060d14c45998741778e6f87e, type: 3}
-  m_PrefabInstance: {fileID: 2599421742029437285}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185487010789711180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a130ad32697c80440b8ab268618ca88f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 605846874276614666}
-  slider1: {fileID: 7339193293476622138}
-  slider2: {fileID: 2615081899785625096}
-  slider3: {fileID: 2487362807049351927}
-  slider4: {fileID: 1011986843260108754}
-  cursorSpread: 0
-  sensitivityPercent: 38
-  runSpeed: 7
-  jumpForce: 350
-  capsule: {fileID: 5506083173137945735}
-  camera: {fileID: 4284524644509703465}
-  speed: 7
---- !u!114 &1290868628287150732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 7208202938750659425, guid: b86c7b5b060d14c45998741778e6f87e, type: 3}
-  m_PrefabInstance: {fileID: 2599421742029437285}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185487010789711180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_NotificationBehavior: 0
-  m_MaxPlayerCount: -1
-  m_AllowJoining: 1
-  m_JoinBehavior: 0
-  m_PlayerJoinedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_PlayerLeftEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_JoinAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: 
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 4a69302e-01c5-4ed8-acbc-83284ed71d65
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 0}
-  m_SplitScreen: 0
-  m_MaintainAspectRatioInSplitScreen: 0
-  m_FixedNumberOfSplitScreens: -1
-  m_SplitScreenRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
 --- !u!1 &211577955971565727
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +328,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867b6d88fb0e25e45af09a58bdd8de63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skat: {fileID: 5294086339181142433}
+  ammo: 14
+  skott: {fileID: 5294086339181142433}
+  magazine: 2
+  magazines: {fileID: 7076500395075874967}
   _hp: 6
   heart1: {fileID: 911384012603827686}
   heart2: {fileID: 7998319687489386433}
@@ -2185,6 +2058,10 @@ GameObject:
   - component: {fileID: 2346607540699355094}
   - component: {fileID: 3689926167501633838}
   - component: {fileID: 502386859889471665}
+  - component: {fileID: 3147557697836688334}
+  - component: {fileID: 4822923542469224913}
+  - component: {fileID: 8516400444558052430}
+  - component: {fileID: 6458955008696597279}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Player
@@ -2309,6 +2186,133 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &3147557697836688334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5506083173137945735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a130ad32697c80440b8ab268618ca88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 605846874276614666}
+  slider1: {fileID: 7339193293476622138}
+  slider2: {fileID: 2615081899785625096}
+  slider3: {fileID: 2487362807049351927}
+  slider4: {fileID: 1011986843260108754}
+  cursorSpread: 0
+  sensitivityPercent: 38
+  runSpeed: 7
+  jumpForce: 350
+  capsule: {fileID: 5506083173137945735}
+  camera: {fileID: 4284524644509703465}
+  speed: 7
+--- !u!114 &4822923542469224913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5506083173137945735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NotificationBehavior: 0
+  m_MaxPlayerCount: -1
+  m_AllowJoining: 1
+  m_JoinBehavior: 0
+  m_PlayerJoinedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_PlayerLeftEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_JoinAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 4a69302e-01c5-4ed8-acbc-83284ed71d65
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_PlayerPrefab: {fileID: 5506083173137945735}
+  m_SplitScreen: 0
+  m_MaintainAspectRatioInSplitScreen: 0
+  m_FixedNumberOfSplitScreens: -1
+  m_SplitScreenRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!114 &8516400444558052430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5506083173137945735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718abfabc31e8b64e833e4524b9660dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magazines: 2
+  barrel: {fileID: 4254632629393795893}
+  bull: {fileID: 5799037292967989485, guid: 388c3d61dfc45f44b962edeab7df9548, type: 3}
+  attackDmg: 37
+  critDmg: 23
+  critChans: 30
+  reloadTimeSeconds: 3.5
+  fireRatePerSeconds: 2.3
+  spread: 2.5
+--- !u!114 &6458955008696597279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5506083173137945735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: bd63fd354c9d1ab4eb6a05816c9258ed, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 12034542-55f8-4d51-b6d6-0a32201d55f7
+    m_ActionName: Player/Walk[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1e819d8c-546b-47a3-92c9-c68ba32ffa9f
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &6059162139257513401
 GameObject:
   m_ObjectHideFlags: 0

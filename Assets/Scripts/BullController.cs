@@ -27,4 +27,9 @@ public class BullController : MonoBehaviour
         rigidbody.AddRelativeForce(0,0,speed);
         speed = speed/2;
     }
+    private void OnCollisionEnter(Collision other)
+    {
+        Destroy(this.gameObject);
+        other.body.BroadcastMessage("OnBulletCollide");
+    }
 }
