@@ -39,7 +39,7 @@ public class EnemyCTRL : MonoBehaviour
         enemyHealth --;
         if (enemyHealth <0)
         {
-            Destroy(thisGameObject,0.5f);
+            
             Vector3 vector3 = new();
             vector3.x = Random.Range(-50,50);
             vector3.z = Random.Range(-50,50);
@@ -61,6 +61,7 @@ public class EnemyCTRL : MonoBehaviour
             }
             vector3 = new(thisGameObject.transform.position.x,20,thisGameObject.transform.position.z);
             Instantiate(magazines,vector3,Quaternion.identity);
+            Destroy(this.gameObject,0.5f);
         }
        
     }
