@@ -26,15 +26,15 @@ public class EnemyCTRL : MonoBehaviour
     {
         if (transform.position.y < -200)
         {
-        Vector3 vector3 = new();
-        vector3.x = Random.Range(-50,50);
-        vector3.z = Random.Range(-50,50);
-        vector3.y = 20;
-        Instantiate(thisGameObject,vector3,Quaternion.identity);
-        Destroy(this.gameObject);
+            Vector3 vector3 = new();
+            vector3.x = Random.Range(-50,50);
+            vector3.z = Random.Range(-50,50);
+            vector3.y = 20;
+            Instantiate(thisGameObject,vector3,Quaternion.identity);
+            Destroy(this.gameObject);
         }
     }
-    void OnBulletCollide()
+    public void OnBulletCollide()
     {
         enemyHealth --;
         if (enemyHealth <0)
@@ -61,7 +61,7 @@ public class EnemyCTRL : MonoBehaviour
             }
             vector3 = new(thisGameObject.transform.position.x,20,thisGameObject.transform.position.z);
             Instantiate(magazines,vector3,Quaternion.identity);
-            Destroy(this.gameObject,0.5f);
+            Destroy(gameObject,0.5f);
         }
        
     }

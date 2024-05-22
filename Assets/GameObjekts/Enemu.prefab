@@ -148,6 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldVariableKeeper: {fileID: 0}
   thisGameObject: {fileID: 7729321346147182064}
-  magazines: {fileID: 0}
+  magazines: {fileID: 4325789598045979953, guid: 77b092432c9d56a459c8ea6599bda1c7, type: 3}
   enemyHealth: 1
   enemy: 1

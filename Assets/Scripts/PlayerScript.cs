@@ -6,6 +6,10 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 public class PlayerScript : MonoBehaviour
 {
+    private float _knocksBack;
+    [SerializeField]
+    float knockBack = 20;
+    private bool _knockedBack = false;
     [SerializeField]
     GameObject canvas;
     [SerializeField]
@@ -50,10 +54,20 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         Mathf.Clamp(sensitivityPercent,1,1000);
+        if (_knockedBack)
+        {
+            _knocksBack =  -knockBack;   
+            _knockedBack=false;
+        }
+        else 
+        {
+            _knocksBack = 0;
+        }
         capsule.transform.Translate(-move.y*speed *Time.deltaTime,0,move.x*speed *Time.deltaTime);
         capsule.transform.Rotate(0,look.x*sensitivityPercent/100,0);
-        camera.transform.Rotate(-look.y*sensitivityPercent/100,0,0);
-        _lookCap += -look.y*sensitivityPercent/100;
+        camera.transform.Rotate(-look.y*sensitivityPercent/100+_knocksBack,0,0);
+        _lookCap += -look.y*sensitivityPercent/100+_knocksBack;
+        
         if (_lookCap > 90)
         {
             _equal = 90 -_lookCap;
@@ -134,5 +148,9 @@ public class PlayerScript : MonoBehaviour
         }
         
         print("done");
+    }
+    void GunFire()
+    {
+        _knockedBack = true;
     }
 }

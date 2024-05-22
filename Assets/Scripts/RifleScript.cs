@@ -56,6 +56,7 @@ public class RifleScript : MonoBehaviour
             _fireRateTimer = 0;
             _spreadTimer = 0;
             ammo --;
+            BroadcastMessage("GunFire");
             BroadcastMessage("OnAmmoCount",ammo);
         }
         if (_spreadTimer < 1&& limit)

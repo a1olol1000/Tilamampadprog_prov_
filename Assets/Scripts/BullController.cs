@@ -29,7 +29,8 @@ public class BullController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        Destroy(this.gameObject);
         other.body.BroadcastMessage("OnBulletCollide");
+        Destroy(this.gameObject);
+        
     }
 }

@@ -21,12 +21,16 @@ public class MagasineScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other) 
     {
-        Vector3 vector3 = new();
-        vector3.x = Random.Range(-100,100);
-        vector3.z = Random.Range(-100,100);
-        vector3.y = 20;
-        other.body.BroadcastMessage("OnMagazinecollide");
-        Instantiate(thisGameObject,vector3,Quaternion.identity);
-        Destroy(this.gameObject);
+        if (other.body.GetComponent<PlayerScript>())
+        {
+            Vector3 vector3 = new();
+            vector3.x = Random.Range(-100,100);
+            vector3.z = Random.Range(-100,100);
+            vector3.y = 20;
+            other.body.BroadcastMessage("OnMagazinecollide");
+            Instantiate(thisGameObject,vector3,Quaternion.identity);
+            Destroy(gameObject);
+        }
+
     }
 }
